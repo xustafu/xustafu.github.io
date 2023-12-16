@@ -12,3 +12,4 @@ Thanks to Fantasia's customized version of Teensy Audio Library online editor yo
 - From the Arduino IDE, open the project in [teensy-fantasia-template](teensy-fantasia-template-libs). 
 - Install the libraries included in [teensy-fantasia-template-libs](teensy-fantasia-template-libs) directory.
 - Connect your device and upload the code.
+  - if you get an error that `SD` libraries are duplicated, remove the library in the default Arduino path, and keep the one form the Teensyduino.
