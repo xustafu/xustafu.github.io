@@ -60,8 +60,24 @@ var RED = (function() {
 			nns.sort(function(a,b){ return (a.x + a.y/250) - (b.x + b.y/250); });
 			//console.log(JSON.stringify(nns));
 
-			var cpp = "#include <Audio.h>\n#include <Wire.h>\n"
-				+ "#include <SPI.h>\n#include <SD.h>\n#include <SerialFlash.h>\n\n"
+			var cpp = ""
+				+ "// use: https://github.com/dgduncan/SevenSegment\n"
+				+ "#include <SegmentDisplay.h>\n"
+				+ "// https://github.com/newdigate/teensy-variable-playback\n"
+				+ "#include <TeensyVariablePlayback.h>\n"
+				+ "\n"
+				+ "#include <Audio.h>\n"
+				+ "#include <Wire.h>\n"
+				+ "#include <SPI.h>"
+				+ "#include <SD.h>\n"
+				+ "#include <SerialFlash.h>\n"
+				+ "#include <Encoder.h>\n"
+				+ "\n"
+				+ "#define MAX_NUM_SOUND_BANKS 2\n"
+				+ "#define MAX_NUM_SOUND_FILES 16\n"
+				+ "#define BUTTON_UP 0\n"
+				+ "#define BUTTON_DOWN 1\n"
+				+ "\n"
 				+ "// GUItool: begin automatically generated code\n";
 			// generate code for all audio processing nodes
 			for (var i=0; i<nns.length; i++) {
