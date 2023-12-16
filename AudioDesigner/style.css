@@ -17,7 +17,8 @@
 body {
   font: 13px "Helvetica" !important;
   padding-top: 100px;
-  background: url("img/pw_maze_white.png");
+  background-color: #FFC47E;
+  /* background: url("img/pw_maze_white.png"); */
 }
 #dropTarget {
     position: absolute;
@@ -176,13 +177,15 @@ a.brand img {
     margin-bottom: 5px;
 }
 .palette-content {
-    background: #fff;
+  background: #FFC47E;
+    /* background: #fff; */
     border-top: 1px solid #aaa;
     padding-bottom: 3px;
 }
 
 .palette-header {
-    background: #f3f3f3;
+  background: #FFC47E;
+    /* background: #f3f3f3; */
     border-radius: 3px;
     cursor: pointer;
     text-align: left;
