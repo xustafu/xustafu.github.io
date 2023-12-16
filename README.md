@@ -11,4 +11,4 @@ Thanks to Fantasia's customized version of Teensy Audio Library online editor yo
 ## Requirements
 
 - [Teensyduino](https://www.pjrc.com/teensy/td_download.html) 
-- From the Arduino IDE, install the libraries from the <teensy-fantasia-template-libs> directory.
+- From the Arduino IDE, install the libraries from the [teensy-fantasia-template-libs](teensy-fantasia-template-libs) directory.
