@@ -68,7 +68,7 @@ var RED = (function() {
 				+ "\n"
 				+ "#include <Audio.h>\n"
 				+ "#include <Wire.h>\n"
-				+ "#include <SPI.h>"
+				+ "#include <SPI.h>\n"
 				+ "#include <SD.h>\n"
 				+ "#include <SerialFlash.h>\n"
 				+ "#include <Encoder.h>\n"
@@ -105,8 +105,13 @@ var RED = (function() {
 						for (var k=0; k<wires.length; k++) {
 							var wire = n.wires[j][k];
 							if (wire) {
+								console.log(n);
+								console.log(RED.nodes);
+								console.log(wire);
 								var parts = wire.split(":");
 								if (parts.length == 2) {
+
+									//console.log(parts[1]);
 									cpp += "AudioConnection          patchCord" + cordcount + "(";
 									var src = RED.nodes.node(n.id);
 									var dst = RED.nodes.node(parts[0]);
@@ -139,6 +144,15 @@ var RED = (function() {
 					cpp += "//xy=" + n.x + "," + n.y + "\n";
 				}
 			}
+
+			cpp += "void setup() {\n"
+			cpp += "// put your setup code here, to run once:\n"
+			cpp += "}\n"
+
+			cpp += "void loop() {\n"
+			cpp += "// put your main code here, to run repeatedly:\n"
+			cpp += "}\n "
+
 			cpp += "// GUItool: end automatically generated code\n";
 			//console.log(cpp);
 
